@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "SEO": {
+    "seo": {
       "type": "component",
       "repeatable": false,
       "component": "shared.seo",
