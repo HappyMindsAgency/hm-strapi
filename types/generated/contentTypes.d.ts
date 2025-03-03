@@ -555,6 +555,8 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'shared.quote',
         'shared.media',
         'shared.codice',
+        'shared.video-header',
+        'shared.pulsante',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
