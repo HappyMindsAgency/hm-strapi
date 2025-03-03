@@ -24,7 +24,9 @@
         "shared.rich-text",
         "shared.quote",
         "shared.media",
-        "shared.codice"
+        "shared.codice",
+        "shared.video-header",
+        "shared.pulsante"
       ]
     },
     "Titolo": {
