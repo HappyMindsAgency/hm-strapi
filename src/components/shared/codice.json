@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_codices",
+  "info": {
+    "displayName": "Codice",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "Code": {
+      "type": "text"
+    }
+  }
+}
