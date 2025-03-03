@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Esclusione del db sqlite dal commit su GitHub
+.tmp
