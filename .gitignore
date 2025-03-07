@@ -130,6 +130,4 @@ dist
 .pnp.*
 
 # Esclusione del db sqlite dal commit su GitHub
-# /.tmp
 .tmp/data.db
-# *.db
