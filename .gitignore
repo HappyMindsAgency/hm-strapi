@@ -131,3 +131,4 @@ dist
 
 # Esclusione del db sqlite dal commit su GitHub
 .tmp/data.db
+.strapi-updater.json
