@@ -1,16 +1,16 @@
 {
   "collectionName": "components_shared_video_headers",
   "info": {
-    "displayName": "Video Header",
+    "displayName": "VideoHeader",
     "icon": "play",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "Titolo": {
+    "titolo": {
       "type": "string"
     },
-    "Video": {
+    "video": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -18,10 +18,10 @@
         "videos"
       ]
     },
-    "Descrizione": {
+    "descrizione": {
       "type": "richtext"
     },
-    "Pulsante": {
+    "pulsante": {
       "type": "component",
       "repeatable": false,
       "component": "shared.pulsante"

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_counters",
+  "info": {
+    "displayName": "counter",
+    "icon": "chartPie"
+  },
+  "options": {},
+  "attributes": {
+    "titolo": {
+      "type": "string"
+    },
+    "numero": {
+      "type": "integer"
+    }
+  }
+}

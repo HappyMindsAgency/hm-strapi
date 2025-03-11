@@ -1,5 +1,59 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SeoComponentsMetaSocial extends Struct.ComponentSchema {
+  collectionName: 'components_seo_components_meta_socials';
+  info: {
+    description: '';
+    displayName: 'metaSocial';
+    icon: 'project-diagram';
+  };
+  attributes: {
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 65;
+      }>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
+    socialNetwork: Schema.Attribute.Enumeration<['Facebook', 'Twitter']> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+  };
+}
+
+export interface SeoComponentsSeo extends Struct.ComponentSchema {
+  collectionName: 'components_seo_components_seos';
+  info: {
+    description: '';
+    displayName: 'seo';
+    icon: 'search';
+  };
+  attributes: {
+    canonicalURL: Schema.Attribute.String;
+    keywords: Schema.Attribute.Text;
+    metaDescription: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+        minLength: 50;
+      }>;
+    metaImage: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+      Schema.Attribute.Required;
+    metaRobots: Schema.Attribute.String;
+    metaSocial: Schema.Attribute.Component<'seo-components.meta-social', true>;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    metaViewport: Schema.Attribute.String;
+    structuredData: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedCodice extends Struct.ComponentSchema {
   collectionName: 'components_shared_codices';
   info: {
@@ -8,6 +62,18 @@ export interface SharedCodice extends Struct.ComponentSchema {
   };
   attributes: {
     Code: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedCounter extends Struct.ComponentSchema {
+  collectionName: 'components_shared_counters';
+  info: {
+    displayName: 'counter';
+    icon: 'chartPie';
+  };
+  attributes: {
+    numero: Schema.Attribute.Integer;
+    titolo: Schema.Attribute.String;
   };
 }
 
@@ -22,27 +88,26 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedMetaSocial extends Struct.ComponentSchema {
-  collectionName: 'components_shared_meta_socials';
+export interface SharedOpenGraph extends Struct.ComponentSchema {
+  collectionName: 'components_shared_open_graphs';
   info: {
-    description: '';
-    displayName: 'metaSocial';
+    displayName: 'openGraph';
     icon: 'project-diagram';
   };
   attributes: {
-    description: Schema.Attribute.String &
+    ogDescription: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 65;
+        maxLength: 200;
       }>;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-    socialNetwork: Schema.Attribute.Enumeration<['Facebook', 'Twitter']> &
-      Schema.Attribute.Required;
-    title: Schema.Attribute.String &
+    ogImage: Schema.Attribute.Media<'images'>;
+    ogTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
+        maxLength: 70;
       }>;
+    ogType: Schema.Attribute.String;
+    ogUrl: Schema.Attribute.String;
   };
 }
 
@@ -54,11 +119,11 @@ export interface SharedPulsante extends Struct.ComponentSchema {
     icon: 'cursor';
   };
   attributes: {
-    DestinazioneLink: Schema.Attribute.Boolean &
+    destinazioneLink: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
-    Etichetta: Schema.Attribute.String;
-    TitleParam: Schema.Attribute.String;
-    URL: Schema.Attribute.String & Schema.Attribute.DefaultTo<'https://'>;
+    etichetta: Schema.Attribute.String;
+    titleParam: Schema.Attribute.String;
+    url: Schema.Attribute.String & Schema.Attribute.DefaultTo<'https://'>;
   };
 }
 
@@ -86,33 +151,15 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedSeo extends Struct.ComponentSchema {
-  collectionName: 'components_shared_seos';
+export interface SharedRigaCounter extends Struct.ComponentSchema {
+  collectionName: 'components_shared_riga_counters';
   info: {
     description: '';
-    displayName: 'seo';
-    icon: 'search';
+    displayName: 'RigaCounter';
+    icon: 'chartPie';
   };
   attributes: {
-    canonicalURL: Schema.Attribute.String;
-    keywords: Schema.Attribute.Text;
-    metaDescription: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 160;
-        minLength: 50;
-      }>;
-    metaImage: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
-      Schema.Attribute.Required;
-    metaRobots: Schema.Attribute.String;
-    metaSocial: Schema.Attribute.Component<'shared.meta-social', true>;
-    metaTitle: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 60;
-      }>;
-    metaViewport: Schema.Attribute.String;
-    structuredData: Schema.Attribute.JSON;
+    counter: Schema.Attribute.Component<'shared.counter', true>;
   };
 }
 
@@ -132,27 +179,30 @@ export interface SharedVideoHeader extends Struct.ComponentSchema {
   collectionName: 'components_shared_video_headers';
   info: {
     description: '';
-    displayName: 'Video Header';
+    displayName: 'VideoHeader';
     icon: 'play';
   };
   attributes: {
-    Descrizione: Schema.Attribute.RichText;
-    Pulsante: Schema.Attribute.Component<'shared.pulsante', false>;
-    Titolo: Schema.Attribute.String;
-    Video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
+    descrizione: Schema.Attribute.RichText;
+    pulsante: Schema.Attribute.Component<'shared.pulsante', false>;
+    titolo: Schema.Attribute.String;
+    video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'seo-components.meta-social': SeoComponentsMetaSocial;
+      'seo-components.seo': SeoComponentsSeo;
       'shared.codice': SharedCodice;
+      'shared.counter': SharedCounter;
       'shared.media': SharedMedia;
-      'shared.meta-social': SharedMetaSocial;
+      'shared.open-graph': SharedOpenGraph;
       'shared.pulsante': SharedPulsante;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
-      'shared.seo': SharedSeo;
+      'shared.riga-counter': SharedRigaCounter;
       'shared.slider': SharedSlider;
       'shared.video-header': SharedVideoHeader;
     }

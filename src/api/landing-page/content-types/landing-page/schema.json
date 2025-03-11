@@ -11,12 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "seo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.seo",
-      "required": true
-    },
     "Content": {
       "type": "dynamiczone",
       "components": [
@@ -26,17 +20,23 @@
         "shared.media",
         "shared.codice",
         "shared.video-header",
-        "shared.pulsante"
+        "shared.pulsante",
+        "shared.riga-counter"
       ]
     },
     "Titolo": {
       "type": "string",
       "required": true
     },
-    "Slug": {
-      "type": "string",
+    "slug": {
+      "type": "uid",
       "required": true,
-      "unique": true
+      "targetField": "Titolo"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo-components.seo"
     }
   }
 }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_riga_counters",
+  "info": {
+    "displayName": "RigaCounter",
+    "icon": "chartPie",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "counter": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.counter"
+    }
+  }
+}
