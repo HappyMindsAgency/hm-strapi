@@ -185,6 +185,7 @@ export interface SharedVideoHeader extends Struct.ComponentSchema {
   attributes: {
     descrizione: Schema.Attribute.RichText;
     pulsante: Schema.Attribute.Component<'shared.pulsante', false>;
+    sottotitolo: Schema.Attribute.Text;
     titolo: Schema.Attribute.String;
     video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
   };
