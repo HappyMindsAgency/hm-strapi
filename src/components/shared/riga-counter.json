@@ -11,6 +11,13 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.counter"
+    },
+    "immagine": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

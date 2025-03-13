@@ -68,11 +68,13 @@ export interface SharedCodice extends Struct.ComponentSchema {
 export interface SharedCounter extends Struct.ComponentSchema {
   collectionName: 'components_shared_counters';
   info: {
+    description: '';
     displayName: 'counter';
     icon: 'chartPie';
   };
   attributes: {
     numero: Schema.Attribute.Integer;
+    sottotitolo: Schema.Attribute.Text;
     titolo: Schema.Attribute.String;
   };
 }
@@ -160,6 +162,7 @@ export interface SharedRigaCounter extends Struct.ComponentSchema {
   };
   attributes: {
     counter: Schema.Attribute.Component<'shared.counter', true>;
+    immagine: Schema.Attribute.Media<'images'>;
   };
 }
 
