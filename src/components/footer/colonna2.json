@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_footer_colonna2s",
+  "info": {
+    "displayName": "datiGenerali",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "infoIcona": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.info-and-icona"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}

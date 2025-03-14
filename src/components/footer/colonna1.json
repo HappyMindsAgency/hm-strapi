@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_footer_colonna1s",
+  "info": {
+    "displayName": "infoGenerali",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "nomeAgenzia": {
+      "type": "string"
+    },
+    "descrizione": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "testoLink": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "class": {
+      "type": "string"
+    },
+    "targetBlank": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,5 +1,44 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface FooterBottomBar extends Struct.ComponentSchema {
+  collectionName: 'components_footer_bottom_bars';
+  info: {
+    description: '';
+    displayName: 'BottomBar';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    credits: Schema.Attribute.Blocks;
+    iconaSocial: Schema.Attribute.Component<'shared.info-and-icona', true>;
+  };
+}
+
+export interface FooterColonna1 extends Struct.ComponentSchema {
+  collectionName: 'components_footer_colonna1s';
+  info: {
+    description: '';
+    displayName: 'infoGenerali';
+    icon: 'briefcase';
+  };
+  attributes: {
+    descrizione: Schema.Attribute.Blocks;
+    nomeAgenzia: Schema.Attribute.String;
+  };
+}
+
+export interface FooterColonna2 extends Struct.ComponentSchema {
+  collectionName: 'components_footer_colonna2s';
+  info: {
+    description: '';
+    displayName: 'datiGenerali';
+    icon: 'bulletList';
+  };
+  attributes: {
+    infoIcona: Schema.Attribute.Component<'shared.info-and-icona', true>;
+    link: Schema.Attribute.Component<'shared.link', true>;
+  };
+}
+
 export interface SeoComponentsMetaSocial extends Struct.ComponentSchema {
   collectionName: 'components_seo_components_meta_socials';
   info: {
@@ -76,6 +115,36 @@ export interface SharedCounter extends Struct.ComponentSchema {
     numero: Schema.Attribute.Integer;
     sottotitolo: Schema.Attribute.Text;
     titolo: Schema.Attribute.String;
+  };
+}
+
+export interface SharedInfoAndIcona extends Struct.ComponentSchema {
+  collectionName: 'components_shared_info_and_iconas';
+  info: {
+    description: '';
+    displayName: 'info&icona';
+    icon: 'chartCircle';
+  };
+  attributes: {
+    icona: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'https://fontawesome.com/search?q=cerca&o=r&ic=free'>;
+    info: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
+export interface SharedLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
+  info: {
+    displayName: 'Link';
+    icon: 'cursor';
+  };
+  attributes: {
+    class: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    targetBlank: Schema.Attribute.Boolean;
+    testoLink: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -197,10 +266,15 @@ export interface SharedVideoHeader extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'footer.bottom-bar': FooterBottomBar;
+      'footer.colonna1': FooterColonna1;
+      'footer.colonna2': FooterColonna2;
       'seo-components.meta-social': SeoComponentsMetaSocial;
       'seo-components.seo': SeoComponentsSeo;
       'shared.codice': SharedCodice;
       'shared.counter': SharedCounter;
+      'shared.info-and-icona': SharedInfoAndIcona;
+      'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.open-graph': SharedOpenGraph;
       'shared.pulsante': SharedPulsante;

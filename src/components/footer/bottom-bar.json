@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_bottom_bars",
+  "info": {
+    "displayName": "BottomBar",
+    "icon": "arrowDown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "iconaSocial": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.info-and-icona"
+    },
+    "credits": {
+      "type": "blocks"
+    }
+  }
+}
