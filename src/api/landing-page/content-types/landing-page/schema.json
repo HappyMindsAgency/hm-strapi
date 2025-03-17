@@ -21,7 +21,8 @@
         "shared.codice",
         "shared.video-header",
         "shared.pulsante",
-        "shared.riga-counter"
+        "shared.riga-counter",
+        "shared.slider-clienti"
       ]
     },
     "Titolo": {

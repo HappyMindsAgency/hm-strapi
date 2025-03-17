@@ -148,6 +148,20 @@ export interface SharedLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLogoCliente extends Struct.ComponentSchema {
+  collectionName: 'components_shared_logo_clientes';
+  info: {
+    description: '';
+    displayName: 'logoCliente';
+    icon: 'walk';
+  };
+  attributes: {
+    link: Schema.Attribute.Component<'shared.link', false>;
+    logo: Schema.Attribute.Media<'images'>;
+    nome: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -247,6 +261,17 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSliderClienti extends Struct.ComponentSchema {
+  collectionName: 'components_shared_slider_clientis';
+  info: {
+    displayName: 'sliderClienti';
+    icon: 'briefcase';
+  };
+  attributes: {
+    cliente: Schema.Attribute.Component<'shared.logo-cliente', true>;
+  };
+}
+
 export interface SharedVideoHeader extends Struct.ComponentSchema {
   collectionName: 'components_shared_video_headers';
   info: {
@@ -275,6 +300,7 @@ declare module '@strapi/strapi' {
       'shared.counter': SharedCounter;
       'shared.info-and-icona': SharedInfoAndIcona;
       'shared.link': SharedLink;
+      'shared.logo-cliente': SharedLogoCliente;
       'shared.media': SharedMedia;
       'shared.open-graph': SharedOpenGraph;
       'shared.pulsante': SharedPulsante;
@@ -282,6 +308,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.riga-counter': SharedRigaCounter;
       'shared.slider': SharedSlider;
+      'shared.slider-clienti': SharedSliderClienti;
       'shared.video-header': SharedVideoHeader;
     }
   }

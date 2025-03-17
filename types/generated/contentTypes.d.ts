@@ -587,6 +587,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'shared.video-header',
         'shared.pulsante',
         'shared.riga-counter',
+        'shared.slider-clienti',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
