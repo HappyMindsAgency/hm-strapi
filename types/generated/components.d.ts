@@ -118,6 +118,17 @@ export interface SharedCodice extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedContainerTextAndSlide extends Struct.ComponentSchema {
+  collectionName: 'components_shared_container_text_and_slides';
+  info: {
+    displayName: 'ContainerText&Slide';
+    icon: 'arrowRight';
+  };
+  attributes: {
+    riga: Schema.Attribute.Component<'shared.text-and-slide', true>;
+  };
+}
+
 export interface SharedCounter extends Struct.ComponentSchema {
   collectionName: 'components_shared_counters';
   info: {
@@ -287,6 +298,23 @@ export interface SharedSliderClienti extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTextAndSlide extends Struct.ComponentSchema {
+  collectionName: 'components_shared_text_and_slides';
+  info: {
+    description: '';
+    displayName: 'Text&Slide';
+    icon: 'arrowRight';
+  };
+  attributes: {
+    paragrafo1: Schema.Attribute.RichText;
+    paragrafo2: Schema.Attribute.RichText;
+    reverseColumn: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    slider: Schema.Attribute.Media<'images', true>;
+    sottotitolo: Schema.Attribute.String;
+    titolo: Schema.Attribute.String;
+  };
+}
+
 export interface SharedVideoHeader extends Struct.ComponentSchema {
   collectionName: 'components_shared_video_headers';
   info: {
@@ -313,6 +341,7 @@ declare module '@strapi/strapi' {
       'seo-components.seo': SeoComponentsSeo;
       'shared.call-to-action': SharedCallToAction;
       'shared.codice': SharedCodice;
+      'shared.container-text-and-slide': SharedContainerTextAndSlide;
       'shared.counter': SharedCounter;
       'shared.info-and-icona': SharedInfoAndIcona;
       'shared.link': SharedLink;
@@ -325,6 +354,7 @@ declare module '@strapi/strapi' {
       'shared.riga-counter': SharedRigaCounter;
       'shared.slider': SharedSlider;
       'shared.slider-clienti': SharedSliderClienti;
+      'shared.text-and-slide': SharedTextAndSlide;
       'shared.video-header': SharedVideoHeader;
     }
   }

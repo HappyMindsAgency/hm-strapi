@@ -589,6 +589,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'shared.slider-clienti',
         'shared.link',
         'shared.call-to-action',
+        'shared.container-text-and-slide',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

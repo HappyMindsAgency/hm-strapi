@@ -23,7 +23,8 @@
         "shared.riga-counter",
         "shared.slider-clienti",
         "shared.link",
-        "shared.call-to-action"
+        "shared.call-to-action",
+        "shared.container-text-and-slide"
       ]
     },
     "titolo": {
