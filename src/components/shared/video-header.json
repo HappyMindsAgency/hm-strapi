@@ -21,13 +21,13 @@
     "descrizione": {
       "type": "richtext"
     },
+    "sottotitolo": {
+      "type": "text"
+    },
     "pulsante": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.pulsante"
-    },
-    "sottotitolo": {
-      "type": "text"
+      "component": "shared.link"
     }
   }
 }

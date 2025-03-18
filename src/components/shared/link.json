@@ -1,8 +1,9 @@
 {
   "collectionName": "components_shared_links",
   "info": {
-    "displayName": "Link",
-    "icon": "cursor"
+    "displayName": "Link/Pulsante",
+    "icon": "cursor",
+    "description": ""
   },
   "options": {},
   "attributes": {

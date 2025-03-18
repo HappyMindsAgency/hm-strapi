@@ -93,6 +93,20 @@ export interface SeoComponentsSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCallToAction extends Struct.ComponentSchema {
+  collectionName: 'components_shared_call_to_actions';
+  info: {
+    displayName: 'CallToAction';
+    icon: 'crown';
+  };
+  attributes: {
+    descrizione: Schema.Attribute.Blocks;
+    pulsante: Schema.Attribute.Component<'shared.link', false>;
+    sottotitolo: Schema.Attribute.String;
+    titolo: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCodice extends Struct.ComponentSchema {
   collectionName: 'components_shared_codices';
   info: {
@@ -136,7 +150,8 @@ export interface SharedInfoAndIcona extends Struct.ComponentSchema {
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
-    displayName: 'Link';
+    description: '';
+    displayName: 'Link/Pulsante';
     icon: 'cursor';
   };
   attributes: {
@@ -281,7 +296,7 @@ export interface SharedVideoHeader extends Struct.ComponentSchema {
   };
   attributes: {
     descrizione: Schema.Attribute.RichText;
-    pulsante: Schema.Attribute.Component<'shared.pulsante', false>;
+    pulsante: Schema.Attribute.Component<'shared.link', false>;
     sottotitolo: Schema.Attribute.Text;
     titolo: Schema.Attribute.String;
     video: Schema.Attribute.Media<'videos'> & Schema.Attribute.Required;
@@ -296,6 +311,7 @@ declare module '@strapi/strapi' {
       'footer.colonna2': FooterColonna2;
       'seo-components.meta-social': SeoComponentsMetaSocial;
       'seo-components.seo': SeoComponentsSeo;
+      'shared.call-to-action': SharedCallToAction;
       'shared.codice': SharedCodice;
       'shared.counter': SharedCounter;
       'shared.info-and-icona': SharedInfoAndIcona;

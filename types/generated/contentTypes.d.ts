@@ -577,7 +577,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Content: Schema.Attribute.DynamicZone<
+    content: Schema.Attribute.DynamicZone<
       [
         'shared.slider',
         'shared.rich-text',
@@ -585,9 +585,10 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'shared.media',
         'shared.codice',
         'shared.video-header',
-        'shared.pulsante',
         'shared.riga-counter',
         'shared.slider-clienti',
+        'shared.link',
+        'shared.call-to-action',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -601,8 +602,8 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'seo-components.seo', false>;
-    slug: Schema.Attribute.UID<'Titolo'> & Schema.Attribute.Required;
-    Titolo: Schema.Attribute.String & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    titolo: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

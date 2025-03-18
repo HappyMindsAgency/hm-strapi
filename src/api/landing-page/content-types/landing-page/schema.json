@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Content": {
+    "content": {
       "type": "dynamiczone",
       "components": [
         "shared.slider",
@@ -20,19 +20,19 @@
         "shared.media",
         "shared.codice",
         "shared.video-header",
-        "shared.pulsante",
         "shared.riga-counter",
-        "shared.slider-clienti"
+        "shared.slider-clienti",
+        "shared.link",
+        "shared.call-to-action"
       ]
     },
-    "Titolo": {
+    "titolo": {
       "type": "string",
       "required": true
     },
     "slug": {
       "type": "uid",
-      "required": true,
-      "targetField": "Titolo"
+      "required": true
     },
     "seo": {
       "type": "component",
