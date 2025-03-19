@@ -9,6 +9,9 @@
   "attributes": {
     "nomeAgenzia": {
       "type": "string"
+    },
+    "descrizione": {
+      "type": "richtext"
     }
   }
 }

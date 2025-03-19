@@ -8,6 +8,7 @@ export interface FooterBottomBar extends Struct.ComponentSchema {
     icon: 'arrowDown';
   };
   attributes: {
+    credits: Schema.Attribute.RichText;
     iconaSocial: Schema.Attribute.Component<'shared.info-and-icona', true>;
   };
 }
@@ -20,6 +21,7 @@ export interface FooterColonna1 extends Struct.ComponentSchema {
     icon: 'briefcase';
   };
   attributes: {
+    descrizione: Schema.Attribute.RichText;
     nomeAgenzia: Schema.Attribute.String;
   };
 }
