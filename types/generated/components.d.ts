@@ -172,6 +172,10 @@ export interface SharedCounter extends Struct.ComponentSchema {
   };
   attributes: {
     numero: Schema.Attribute.Integer;
+    simbolo: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 1;
+      }>;
     sottotitolo: Schema.Attribute.Text;
     titolo: Schema.Attribute.String;
   };
