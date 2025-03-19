@@ -590,6 +590,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'shared.link',
         'shared.call-to-action',
         'shared.container-text-and-slide',
+        'shared.format',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

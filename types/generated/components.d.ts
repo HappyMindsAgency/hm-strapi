@@ -107,6 +107,21 @@ export interface SharedCallToAction extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCardProgetto extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_progettos';
+  info: {
+    displayName: 'CardProgetto';
+    icon: 'briefcase';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'shared.link', false>;
+    descrizione: Schema.Attribute.RichText;
+    immagine: Schema.Attribute.Media<'images'>;
+    sottotitolo: Schema.Attribute.String;
+    titolo: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCodice extends Struct.ComponentSchema {
   collectionName: 'components_shared_codices';
   info: {
@@ -139,6 +154,19 @@ export interface SharedCounter extends Struct.ComponentSchema {
   attributes: {
     numero: Schema.Attribute.Integer;
     sottotitolo: Schema.Attribute.Text;
+    titolo: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFormat extends Struct.ComponentSchema {
+  collectionName: 'components_shared_formats';
+  info: {
+    displayName: 'Format';
+    icon: 'briefcase';
+  };
+  attributes: {
+    descrizione: Schema.Attribute.RichText;
+    progetti: Schema.Attribute.Component<'shared.card-progetto', true>;
     titolo: Schema.Attribute.String;
   };
 }
@@ -340,9 +368,11 @@ declare module '@strapi/strapi' {
       'seo-components.meta-social': SeoComponentsMetaSocial;
       'seo-components.seo': SeoComponentsSeo;
       'shared.call-to-action': SharedCallToAction;
+      'shared.card-progetto': SharedCardProgetto;
       'shared.codice': SharedCodice;
       'shared.container-text-and-slide': SharedContainerTextAndSlide;
       'shared.counter': SharedCounter;
+      'shared.format': SharedFormat;
       'shared.info-and-icona': SharedInfoAndIcona;
       'shared.link': SharedLink;
       'shared.logo-cliente': SharedLogoCliente;

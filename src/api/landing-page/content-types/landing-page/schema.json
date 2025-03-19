@@ -24,7 +24,8 @@
         "shared.slider-clienti",
         "shared.link",
         "shared.call-to-action",
-        "shared.container-text-and-slide"
+        "shared.container-text-and-slide",
+        "shared.format"
       ]
     },
     "titolo": {
