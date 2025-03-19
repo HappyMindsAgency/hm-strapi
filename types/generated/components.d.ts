@@ -118,7 +118,7 @@ export interface SharedCallToAction extends Struct.ComponentSchema {
     icon: 'crown';
   };
   attributes: {
-    descriziones: Schema.Attribute.RichText;
+    descrizione: Schema.Attribute.RichText;
     pulsante: Schema.Attribute.Component<'shared.link', false>;
     sottotitolo: Schema.Attribute.String;
     titolo: Schema.Attribute.String;
