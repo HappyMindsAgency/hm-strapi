@@ -591,6 +591,8 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'shared.call-to-action',
         'shared.container-text-and-slide',
         'shared.format',
+        'lp-destination-marketing.presentation',
+        'shared.cta-magenta',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

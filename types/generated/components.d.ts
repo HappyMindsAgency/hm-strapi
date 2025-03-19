@@ -39,6 +39,23 @@ export interface FooterColonna2 extends Struct.ComponentSchema {
   };
 }
 
+export interface LpDestinationMarketingPresentation
+  extends Struct.ComponentSchema {
+  collectionName: 'components_lp_destination_marketing_presentations';
+  info: {
+    displayName: 'Presentation';
+    icon: 'bell';
+  };
+  attributes: {
+    company: Schema.Attribute.Media<'images'>;
+    logo: Schema.Attribute.Media<'images'>;
+    paragrafo1: Schema.Attribute.RichText;
+    paragrafo2: Schema.Attribute.RichText;
+    sottotitolo: Schema.Attribute.String;
+    titolo: Schema.Attribute.String;
+  };
+}
+
 export interface SeoComponentsMetaSocial extends Struct.ComponentSchema {
   collectionName: 'components_seo_components_meta_socials';
   info: {
@@ -117,7 +134,7 @@ export interface SharedCardProgetto extends Struct.ComponentSchema {
   attributes: {
     ctaProgetto: Schema.Attribute.Component<'shared.link', false>;
     descrizione: Schema.Attribute.RichText;
-    immagine: Schema.Attribute.Media<'images'>;
+    immagine: Schema.Attribute.Media<'images', true>;
     sottotitolo: Schema.Attribute.String;
     titolo: Schema.Attribute.String;
   };
@@ -156,6 +173,17 @@ export interface SharedCounter extends Struct.ComponentSchema {
     numero: Schema.Attribute.Integer;
     sottotitolo: Schema.Attribute.Text;
     titolo: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCtaMagenta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cta_magentas';
+  info: {
+    displayName: 'CtaMagenta';
+    icon: 'heart';
+  };
+  attributes: {
+    colonna: Schema.Attribute.Component<'shared.card-progetto', true>;
   };
 }
 
@@ -368,6 +396,7 @@ declare module '@strapi/strapi' {
       'footer.bottom-bar': FooterBottomBar;
       'footer.colonna1': FooterColonna1;
       'footer.colonna2': FooterColonna2;
+      'lp-destination-marketing.presentation': LpDestinationMarketingPresentation;
       'seo-components.meta-social': SeoComponentsMetaSocial;
       'seo-components.seo': SeoComponentsSeo;
       'shared.call-to-action': SharedCallToAction;
@@ -375,6 +404,7 @@ declare module '@strapi/strapi' {
       'shared.codice': SharedCodice;
       'shared.container-text-and-slide': SharedContainerTextAndSlide;
       'shared.counter': SharedCounter;
+      'shared.cta-magenta': SharedCtaMagenta;
       'shared.format': SharedFormat;
       'shared.info-and-icona': SharedInfoAndIcona;
       'shared.link': SharedLink;

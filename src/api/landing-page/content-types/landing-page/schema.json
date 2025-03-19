@@ -25,7 +25,9 @@
         "shared.link",
         "shared.call-to-action",
         "shared.container-text-and-slide",
-        "shared.format"
+        "shared.format",
+        "lp-destination-marketing.presentation",
+        "shared.cta-magenta"
       ]
     },
     "titolo": {

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_cta_magentas",
+  "info": {
+    "displayName": "CtaMagenta",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "colonna": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card-progetto"
+    }
+  }
+}
