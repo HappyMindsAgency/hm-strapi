@@ -110,11 +110,12 @@ export interface SharedCallToAction extends Struct.ComponentSchema {
 export interface SharedCardProgetto extends Struct.ComponentSchema {
   collectionName: 'components_shared_card_progettos';
   info: {
+    description: '';
     displayName: 'CardProgetto';
     icon: 'briefcase';
   };
   attributes: {
-    cta: Schema.Attribute.Component<'shared.link', false>;
+    ctaProgetto: Schema.Attribute.Component<'shared.link', false>;
     descrizione: Schema.Attribute.RichText;
     immagine: Schema.Attribute.Media<'images'>;
     sottotitolo: Schema.Attribute.String;
@@ -166,7 +167,7 @@ export interface SharedFormat extends Struct.ComponentSchema {
     icon: 'briefcase';
   };
   attributes: {
-    cta: Schema.Attribute.Component<'shared.link', false>;
+    ctaFormat: Schema.Attribute.Component<'shared.link', false>;
     descrizione: Schema.Attribute.RichText;
     progetti: Schema.Attribute.Component<'shared.card-progetto', true>;
     titolo: Schema.Attribute.String;

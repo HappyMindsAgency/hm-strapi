@@ -2,7 +2,8 @@
   "collectionName": "components_shared_card_progettos",
   "info": {
     "displayName": "CardProgetto",
-    "icon": "briefcase"
+    "icon": "briefcase",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -16,13 +17,14 @@
       "type": "richtext"
     },
     "immagine": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "cta": {
+    "ctaProgetto": {
       "type": "component",
       "repeatable": false,
       "component": "shared.link"
