@@ -188,6 +188,19 @@ export interface SharedCtaMagenta extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFormLanding extends Struct.ComponentSchema {
+  collectionName: 'components_shared_form_landings';
+  info: {
+    displayName: 'FormLanding';
+    icon: 'envelop';
+  };
+  attributes: {
+    descrizione: Schema.Attribute.RichText;
+    idForm: Schema.Attribute.String;
+    titolo: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFormat extends Struct.ComponentSchema {
   collectionName: 'components_shared_formats';
   info: {
@@ -406,6 +419,7 @@ declare module '@strapi/strapi' {
       'shared.container-text-and-slide': SharedContainerTextAndSlide;
       'shared.counter': SharedCounter;
       'shared.cta-magenta': SharedCtaMagenta;
+      'shared.form-landing': SharedFormLanding;
       'shared.format': SharedFormat;
       'shared.info-and-icona': SharedInfoAndIcona;
       'shared.link': SharedLink;

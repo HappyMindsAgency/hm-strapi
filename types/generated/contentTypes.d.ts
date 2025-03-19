@@ -593,6 +593,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'shared.format',
         'lp-destination-marketing.presentation',
         'shared.cta-magenta',
+        'shared.form-landing',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
