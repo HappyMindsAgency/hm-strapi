@@ -113,11 +113,12 @@ export interface SeoComponentsSeo extends Struct.ComponentSchema {
 export interface SharedCallToAction extends Struct.ComponentSchema {
   collectionName: 'components_shared_call_to_actions';
   info: {
+    description: '';
     displayName: 'CallToAction';
     icon: 'crown';
   };
   attributes: {
-    descrizione: Schema.Attribute.Blocks;
+    descriziones: Schema.Attribute.RichText;
     pulsante: Schema.Attribute.Component<'shared.link', false>;
     sottotitolo: Schema.Attribute.String;
     titolo: Schema.Attribute.String;
