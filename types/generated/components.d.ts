@@ -8,7 +8,6 @@ export interface FooterBottomBar extends Struct.ComponentSchema {
     icon: 'arrowDown';
   };
   attributes: {
-    credits: Schema.Attribute.Blocks;
     iconaSocial: Schema.Attribute.Component<'shared.info-and-icona', true>;
   };
 }
@@ -21,7 +20,6 @@ export interface FooterColonna1 extends Struct.ComponentSchema {
     icon: 'briefcase';
   };
   attributes: {
-    descrizione: Schema.Attribute.Blocks;
     nomeAgenzia: Schema.Attribute.String;
   };
 }
@@ -161,10 +159,12 @@ export interface SharedCounter extends Struct.ComponentSchema {
 export interface SharedFormat extends Struct.ComponentSchema {
   collectionName: 'components_shared_formats';
   info: {
+    description: '';
     displayName: 'Format';
     icon: 'briefcase';
   };
   attributes: {
+    cta: Schema.Attribute.Component<'shared.link', false>;
     descrizione: Schema.Attribute.RichText;
     progetti: Schema.Attribute.Component<'shared.card-progetto', true>;
     titolo: Schema.Attribute.String;

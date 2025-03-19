@@ -9,9 +9,6 @@
   "attributes": {
     "nomeAgenzia": {
       "type": "string"
-    },
-    "descrizione": {
-      "type": "blocks"
     }
   }
 }
