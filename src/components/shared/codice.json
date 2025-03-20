@@ -2,12 +2,16 @@
   "collectionName": "components_shared_codices",
   "info": {
     "displayName": "Codice",
-    "icon": "code"
+    "icon": "code",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "Code": {
       "type": "text"
+    },
+    "titolo": {
+      "type": "string"
     }
   }
 }

@@ -144,11 +144,13 @@ export interface SharedCardProgetto extends Struct.ComponentSchema {
 export interface SharedCodice extends Struct.ComponentSchema {
   collectionName: 'components_shared_codices';
   info: {
+    description: '';
     displayName: 'Codice';
     icon: 'code';
   };
   attributes: {
     Code: Schema.Attribute.Text;
+    titolo: Schema.Attribute.String;
   };
 }
 
