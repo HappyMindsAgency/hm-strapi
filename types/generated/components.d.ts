@@ -149,7 +149,8 @@ export interface SharedCodice extends Struct.ComponentSchema {
     icon: 'code';
   };
   attributes: {
-    Code: Schema.Attribute.Text;
+    body: Schema.Attribute.Text;
+    head: Schema.Attribute.Text;
     titolo: Schema.Attribute.String;
   };
 }

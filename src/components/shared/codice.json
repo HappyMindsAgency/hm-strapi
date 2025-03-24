@@ -7,11 +7,14 @@
   },
   "options": {},
   "attributes": {
-    "Code": {
+    "body": {
       "type": "text"
     },
     "titolo": {
       "type": "string"
+    },
+    "head": {
+      "type": "text"
     }
   }
 }
